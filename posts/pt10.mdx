@@ -1,0 +1,127 @@
+---
+title: Pertemuan 10
+description: 'Pesan kesalahan/eksepsi'
+date: Jan 2 2021
+---
+
+## Pendahuluan
+
+dalam menggunakan komputer tentu kita tak luput dari kesalahan berupa salah input typo dan lain sebagainya
+
+## Dasar
+
+- Perancangan dialog harus terpisah dari perancangan detail presentasi dan interface leksikal.
+- Fungsi sistem harus ditentukan terlebih dahulu, baru mendesain dialog dengan model kognitif atau analisis tugas.
+- Berikutnya mendesain presentasi sistem secara visual dan interface leksikal antara tombol yang ditekan dan mouse yang digerakkan dengan aksi dialog yang abstrak.
+
+## Pesan kesalahan
+
+- Desain dialog tergantung dari presentasi dan tidak terikat pada detail presentasi dialog.
+
+- Pembentukan pesan kesalahan atau peringatan, sangat penting dalam user interface, terutama untuk user pemula.
+
+## Hal-hal yang perlu dihindari pada pembentukan pesan kesalahan :
+
+“Tekanan” (suara atau pesan) keras yang menyalahkan user
+
+- Pesan terlalu generik
+  - (contoh : WHAT?, SYNTAX ERROR)
+- Pesan yang sulit dimengerti
+  - (contoh : FAC RJCT 004004400400)
+
+## Contoh
+
+- SYNTAX ERROR (buruk)
+  - UNMATCHED LEFT PARENTHESIS (lebih baik)
+  - (Tidak sesuai dengan aturan penulisan)
+- ILLEGAL ENTRY (buruk)
+  - TYPE FIRST LETTER : Send, Read, or Drop (lebih baik)
+  - (Ketikan huruf pertama : Send, Read or Drop)
+- INVALID DATA (buruk)
+  -DAYS RANGE FROM 1 TO 31 (lebih baik)
+  - (Beri range data misal hari dari 1 – 31)
+- BAD FILE NAME (buruk)
+  - FILES NAMES MUST BEGIN WITH A LETTER (lebih baik)
+  - (Nama file harus mulai dari huruf)
+
+## Tipe-tipe Kesalahan (Errors)
+
+1. Mistakes, aksi user yang diambil berdasar keputusan yang salah.
+   Contoh : menggeser icon harddisk ke recycle bin.
+2. Slips, suatu kesalahan yang tidak disengaja.
+3. Capturer error, kesalahan karena terlalu sering atau kebiasaan.
+   Contoh : pada ‘vi editor’ dalam UNIX, mau save (W) tetapi (WQ) save dan quit.
+4. Description error, kesalahan dalam melakukan aksi pada objek yang salah.
+   Contoh : klik ‘X’ untuk menutup editor, tetapi yang di klik adalah ‘X’ aplikasi.
+5. Data-driven error, kesalahan karena pengaruh data dari area edit.
+   Contoh : menulis nama file dengan sesuatu yang terbaca di sekitar window, bukan nama yang diinginkan.
+6. Assosiative-activation error, kesalahan karena pengaruh data yang ada di dalam pikiran user saat itu.
+   Contoh : mirip dengan data-driven error, tetapi ini dengan sesuatu yang ada di pikiran user saat itu.
+7. Loss-of-activation error, kesalahan karena lupa apa yang harus dilakukan.
+   Contoh : lupa mau searching apa.
+8. Mode error, kesalahan akibat lupa ada di ‘dunia’ mana.
+   Contoh : mengetikkan suatu perintah padahal sedang berada di dalam ruang pengeditan teks
+9. Keliru, aksi salah diambil berdasarkan keputusan yang salah.
+   Contoh : ingin mengubah ukuran gambar tetapi yang di lakukan adalah cropping.
+
+## Format fisik yang sesuai
+
+- Gunakan kombinasi huruf besar dan kecil. Pesan dengan huruf besar semua hanya digunakan untuk peringatan gawat.
+
+- Hindari pesan hanya dengan nomor kode. Jika perlu tampilkan kode di akhir pesan
+
+- Penempatan pesan : dekat sumber masalah, dibaris pada bagian bawah layar, sebagai pop-up window di tengah layar.
+
+- Peringatan dengan suara berguna tetapi dapat memalukan pemakai, pemakai harus dapat mengendalikannya.
+
+## Rancangan pesan yang efektif
+
+Produk
+
+- Sespesifik dan sepresisi mungkin
+- Konstruktif : tunjukkan apa yang harus dilakukan
+- Gunakan nada positif, jangan memarahi
+- Gunakan kata yang berpusat ke pemakai
+- Gunakan tatabahasa, istilah dan singkatan yang konsisten
+- Pertimbangkan pesan yang bertingkat
+- Gunakan format visual dan penempatan yang konsisten
+
+Proses
+
+- Bentuk gugus kendali kualitas pesan
+- Sertakan pesan dalam tahap perancangan
+- Simpan semua pesan dalam sebuah file
+- Bahas pesan dalam pengembangan
+- Usahakan untuk menghapus beberapa kebutuhan pesan
+- Laksanakan uji penerimaan (acceptance test)
+- Kumpulkan data frekuensi setiap pesan
+- Kaji ulang dan perbaiki pesan dari waktu ke waktu
+
+Antropomorfik adalah :
+
+- sifat suatu barang yang memiliki sifat atau pribadi manusia
+
+Masalah yang muncul dengan instruksi antropomorfik, dan sekaligus alasan untuk menggunakan instruksi nonantropomorfik :
+
+- Atribut ‘bebas’ dapat menipu, membingungkan, dan menyesatkan pemakai
+- Penting untuk membedakan manusia dengan komputer
+
+## contoh :
+
+Buruk :
+
+- I will begin the lesson when you press RETURN
+
+Lebih baik :
+
+- You can begin the lesson by pressing RETURN
+
+Baik :
+
+- To begin the lesson, press RETURN
+
+## Rancangan tampilan (display)
+
+- Pastikan label cukup dekat dengan data field yang berhubungan tetapi harus dipisahkan dengan paling sedikit satu spasi
+- Buat kolom data alfabetis rata kiri agar mudah ditelusuri
+- Pada tampilan banyak halaman,berikan label pada setiap halaman untuk menunjukkan hubungan dengan halaman lainnya.
